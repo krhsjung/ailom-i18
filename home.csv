@@ -1,0 +1,118 @@
+module,key,en,ko
+common,application_name,Ailom {{platform}},아일롬 {{platform}}
+common,back,Back,뒤로
+common,cancel,Cancel,취소
+common,close,Close,닫기
+common,confirm,Confirm,확인
+common,delete,Delete,삭제
+common,done,Done,완료
+common,edit,Edit,편집
+common,email,Email,이메일
+common,error,Error,오류
+common,loading,Loading...,로딩 중...
+common,login,Log in,로그인
+common,logout,Log out,로그아웃
+common,name,Name,이름
+common,next,Next,다음
+common,ok,OK,확인
+common,or,Or,또는
+common,password,Password,비밀번호
+common,retry,Retry,재시도
+common,save,Save,저장
+common,signup,Sign up,회원가입
+common,submit,Submit,제출
+auth,# Login Page,,
+auth,login_slogan,"Peace of Mind, Woven into Everyday Life.",일상에 스며드는 안심.
+auth,login_subtitle,"To keep watch by your side, please sign in to your account first.",곁에서 안심을 돕기 위해 먼저 계정에 연결해 주세요.
+auth,login_forgot_password,Reset password,비밀번호 재설정
+auth,login_no_account,Don't have an account?,아직 계정이 없으신가요?
+auth,login_signup_cta,Sign up,가입하기
+auth,# Signup Page,,
+auth,signup_title,Sign up,회원가입
+auth,signup_verify,Verify,인증
+auth,signup_resend,Resend,재발송
+auth,signup_verified,Verified,인증완료
+auth,signup_resend_countdown,Resend ({{seconds}}s),다시 보내기 ({{seconds}}초)
+auth,signup_password_hint,"At least 8 characters with letters, numbers, and special characters.","8자 이상, 영문·숫자·특수문자를 포함해 주세요."
+auth,signup_confirm_password,Confirm password,비밀번호 확인
+auth,signup_terms_of_service,Agree to Terms of Service (required),이용약관 동의 (필수)
+auth,signup_privacy_policy,Agree to Privacy Policy (required),개인정보 처리방침 동의 (필수)
+auth,signup_marketing,Agree to marketing communications (optional),마케팅 수신 동의 (선택)
+auth,signup_has_account,Already have an account?,이미 계정이 있으신가요?
+auth,signup_login_cta,Log in,로그인
+auth,# Social Consent Page,,
+auth,consent_title,Almost there!,거의 다 왔어요!
+auth,consent_subtitle,Please agree to the terms to use the service.,서비스 이용을 위해 약관에 동의해 주세요.
+auth,consent_start,Get started,시작하기
+auth,# Password Reset,,
+auth,reset_title,Reset password,비밀번호 재설정
+auth,reset_subtitle,Enter your registered email and we'll send you a reset link.,가입하신 이메일을 입력하시면 재설정 링크를 보내드려요.
+auth,reset_send_link,Send reset link,재설정 링크 보내기
+auth,reset_back_to_login,Back to login,로그인으로 돌아가기
+auth,reset_sent_title,Check your email,이메일을 확인해 주세요
+auth,reset_sent_subtitle,"We've sent a reset link to {{email}}. Please check your inbox.","{{email}}으로 재설정 링크를 보내드렸어요. 메일함을 확인해 주세요."
+auth,reset_resend,Didn't receive the email? Resend,이메일을 받지 못하셨나요? 다시 보내기
+auth,reset_new_password_title,Set new password,새 비밀번호 설정
+auth,reset_new_password_subtitle,Please enter a secure new password.,안전한 새 비밀번호를 입력해 주세요.
+auth,reset_new_password_label,New password,새 비밀번호
+auth,reset_change_password,Change password,비밀번호 변경하기
+auth,reset_complete_title,Password changed,비밀번호가 변경되었어요
+auth,reset_complete_subtitle,Please log in with your new password.,새 비밀번호로 로그인해 주세요.
+auth,reset_go_to_login,Log in,로그인하기
+auth,# Placeholders,,
+auth,placeholder_email,Enter your email,이메일을 입력해 주세요
+auth,placeholder_password,Enter your password,비밀번호를 입력해 주세요
+auth,placeholder_confirm_password,Re-enter your password,비밀번호를 다시 입력해 주세요
+auth,placeholder_name,Enter your name,이름을 입력해 주세요
+auth,placeholder_new_password,At least 8 characters,8자 이상 입력해 주세요
+auth,# OAuth Buttons,,
+auth,oauth_google,Continue with Google,Google로 계속하기
+auth,oauth_apple,Continue with Apple,Apple로 계속하기
+auth,oauth_kakao,Continue with Kakao,카카오로 계속하기
+auth,oauth_naver,Continue with Naver,네이버로 계속하기
+auth,oauth_line,Continue with LINE,LINE으로 계속하기
+error,# General errors,,
+error,error_cancelled,Cancelled,취소되었습니다
+error,error_decoding,Failed to parse data,데이터를 읽지 못했습니다
+error,error_encoding,Failed to encode data,데이터를 처리하지 못했습니다
+error,error_invalid_url,Invalid URL,잘못된 URL입니다
+error,error_login_cancelled,Login was cancelled,로그인을 취소했습니다
+error,error_login_failed,Please check your email or password and try again.,이메일 또는 비밀번호를 다시 확인해 주세요.
+error,error_no_data,No data available,데이터가 없습니다
+error,error_oauth_callback_failed,Failed to receive authentication response,인증 정보를 받지 못했습니다
+error,error_signup_failed,Signup failed. Please try again.,회원가입에 실패했습니다. 다시 시도해 주세요.
+error,error_social_login_failed,Something went wrong with the connection. Please try again.,연결에 문제가 생겼습니다. 다시 시도해 주세요.
+error,error_unknown,Something went wrong. Please try again.,잠시 문제가 생겼습니다. 다시 시도해 주세요.
+error,# Network errors,,
+error,error_timeout,Connection timed out. Please try again.,연결 시간이 초과되었습니다. 다시 시도해 주세요.
+error,error_no_connection,No internet connection. Please check your network.,인터넷 연결이 없습니다. 네트워크를 확인해 주세요.
+error,error_server,We're having trouble connecting. Please try again shortly.,잠시 연결이 어렵습니다. 잠시 후 다시 시도해 주세요.
+error,error_bad_request,Invalid request,잘못된 요청입니다
+error,error_not_found,Not found,찾을 수 없습니다
+error,error_rate_limited,Too many requests. Please try again later.,요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.
+error,error_rate_limited_with_retry,Too many requests. Please try again in %1$d seconds.,요청이 너무 많습니다. %1$d초 후에 다시 시도해 주세요.
+error,# Auth errors,,
+error,error_unauthorized,Authentication required,인증이 필요합니다
+error,error_forbidden,Access denied,접근이 거부되었습니다
+error,error_session_expired,Your session has expired. Please log in again.,세션이 만료되었습니다. 다시 로그인해 주세요.
+error,error_email_already_exists,This email is already registered. Please log in instead.,이미 가입된 이메일입니다. 로그인해 주세요.
+error,error_reset_link_invalid,This link has expired or is invalid. Please request again.,링크가 만료되었거나 유효하지 않습니다. 다시 요청해 주세요.
+error,# Email verification errors,,
+error,error_verification_code_invalid,The verification code is incorrect. Please check and try again.,인증 코드가 일치하지 않습니다. 다시 확인해 주세요.
+error,error_verification_code_expired,The verification code has expired. Please request a new one.,인증 코드가 만료되었습니다. 다시 요청해 주세요.
+error,error_too_many_attempts,Too many attempts. Please try again in {{minutes}} minutes.,시도 횟수를 초과했습니다. {{minutes}}분 후 다시 시도해 주세요.
+error,error_resend_cooldown,Please try again shortly.,잠시 후 다시 요청해 주세요.
+error,# Validation errors,,
+error,error_empty_email,Please enter your email,이메일을 입력해 주세요
+error,error_invalid_email,Please enter a valid email address,올바른 이메일 주소를 입력해 주세요
+error,error_empty_password,Please enter your password,비밀번호를 입력해 주세요
+error,error_invalid_password,The password is incorrect,비밀번호가 올바르지 않습니다
+error,error_empty_confirm_password,Please confirm your password,비밀번호를 한번 더 입력해 주세요
+error,error_weak_password,Password must be at least 8 characters,비밀번호는 8자 이상이어야 합니다
+error,error_password_mismatch,Passwords do not match,비밀번호가 일치하지 않습니다
+error,error_empty_username,Please enter your name,이름을 입력해 주세요
+error,error_name_min_length,Name must be at least 2 characters,이름은 최소 2자 이상이어야 합니다
+error,error_password_no_uppercase,Password must contain an uppercase letter,비밀번호는 대문자를 포함해야 합니다
+error,error_password_no_lowercase,Password must contain a lowercase letter,비밀번호는 소문자를 포함해야 합니다
+error,error_password_no_number,Password must contain a number,비밀번호는 숫자를 포함해야 합니다
+error,error_password_no_special_character,Password must contain a special character,비밀번호는 특수문자를 포함해야 합니다
