@@ -12,9 +12,11 @@ const CONFIG = {
     ios: 'iOS',
     android: 'Android',
     react: 'Web',
+    server: '',
   },
   services: {
     home: { platforms: ['ios', 'android', 'react'] },
+    server: { platforms: ['server'] },
   },
 };
 
@@ -202,6 +204,31 @@ function generateReact(modules, languages) {
   }
 }
 
+// Server JSON 생성 — {{platform}} 치환 없이 원본 그대로 출력
+function generateServer(modules, languages) {
+  for (const lang of languages) {
+    const serverDir = path.join(CONFIG.outputDir, 'server', lang);
+    fs.mkdirSync(serverDir, { recursive: true });
+
+    for (const [mod, translations] of Object.entries(modules)) {
+      if (!translations[lang]) continue;
+
+      // {{platform}} 변수를 제거 (서버에서는 플랫폼 구분 불필요)
+      const cleaned = {};
+      for (const [k, v] of Object.entries(translations[lang])) {
+        cleaned[k] = v.replace(/\s*\{\{platform\}\}/g, '').trim();
+      }
+
+      const fileName = `${mod}.json`;
+      fs.writeFileSync(
+        path.join(serverDir, fileName),
+        JSON.stringify(cleaned, null, 2) + '\n'
+      );
+      console.log(`  Server (${lang}): ${fileName}`);
+    }
+  }
+}
+
 // 유틸리티
 function toPascalCase(str) {
   return str.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('');
@@ -220,16 +247,16 @@ function escapeXml(str) {
     .replace(/'/g, "\\'");
 }
 
-function cleanOutputDir() {
-  if (fs.existsSync(CONFIG.outputDir)) {
-    const entries = fs.readdirSync(CONFIG.outputDir);
-    for (const entry of entries) {
-      fs.rmSync(path.join(CONFIG.outputDir, entry), { recursive: true });
+function cleanPlatformDirs(platforms) {
+  fs.mkdirSync(CONFIG.outputDir, { recursive: true });
+
+  for (const platform of platforms) {
+    const dir = path.join(CONFIG.outputDir, platform);
+    if (fs.existsSync(dir)) {
+      fs.rmSync(dir, { recursive: true });
     }
-    console.log('Cleaned translations/\n');
-  } else {
-    fs.mkdirSync(CONFIG.outputDir, { recursive: true });
   }
+  console.log(`Cleaned translations/{${platforms.join(', ')}}\n`);
 }
 
 // 메인 실행
@@ -252,7 +279,7 @@ function main() {
   }
 
   console.log(`Generating [${service}] from ${service}.csv...\n`);
-  cleanOutputDir();
+  cleanPlatformDirs(config.platforms);
 
   const { modules, languages, comments } = parseCsv(csvPath);
   const moduleNames = Object.keys(modules);
@@ -263,6 +290,7 @@ function main() {
     ios: (m, l, c) => generateiOS(m, l),
     android: (m, l, c) => generateAndroid(m, l, c),
     react: (m, l, c) => generateReact(m, l),
+    server: (m, l, c) => generateServer(m, l),
   };
 
   for (const platform of config.platforms) {

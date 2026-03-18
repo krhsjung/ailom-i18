@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Ailom 다국어 파일 생성기 (iOS, Android, React, Server)",
   "scripts": {
-    "generate:home": "node scripts/generate-i18n.js home"
+    "generate:home": "node scripts/generate-i18n.js home",
+    "generate:server": "node scripts/generate-i18n.js server"
   }
 }
