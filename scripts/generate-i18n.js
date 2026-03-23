@@ -63,7 +63,7 @@ function parseCsv(filePath) {
     const langs = {};
     for (let j = 0; j < langColumns.length; j++) {
       const lang = langColumns[j];
-      const value = cols[j + 2] || '';
+      const value = (cols[j + 2] || '').replace(/\\n/g, '\n');
       modules[mod][lang][key] = value;
       langs[lang] = value;
     }
