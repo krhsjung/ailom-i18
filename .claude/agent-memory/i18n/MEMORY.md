@@ -1,0 +1,3 @@
+- [feedback_age_policy.md](feedback_age_policy.md) — auth 모듈 연령 기준은 18+ 통합 baseline (14+ 키 유효값도 18로 교체)
+- [project_rfc0005_status.md](project_rfc0005_status.md) — RFC-0005 A 화면 i18n 키 home.csv 추가 완료 (2026-07-01)
+- [feedback_passkey_biometric.md](feedback_passkey_biometric.md) — passkey 관련 카피에서 biometric/지문/얼굴/Face ID 표현 금지
