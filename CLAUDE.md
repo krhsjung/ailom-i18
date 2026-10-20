@@ -59,7 +59,7 @@ npm run generate:server    # server.csv → server/
 서버에서 `Accept-Language` 헤더를 파싱하여 해당 언어의 JSON을 로드해 사용한다.
 
 포함 모듈:
-- `auth`: 이메일 템플릿 (`email_verification_*`), API 응답 메시지 (`verification_code_sent`)
+- `auth`: 인증 코드 메일 템플릿 (`email_code_*` — 목적별 제목·본문·공통 주의 문구·푸터, 링크 0개 / `email_verification_slogan`), API 응답 메시지
 - `error`: 인증 에러 + 일반 HTTP 에러 메시지
 
 ## 에이전트 상세 지침
